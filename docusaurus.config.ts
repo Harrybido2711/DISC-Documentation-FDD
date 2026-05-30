@@ -70,6 +70,15 @@ const config: Config = {
         ),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "rsae-fdd",
+        path: "docs/rsae-fdd",
+        routeBasePath: "rsae-fdd",
+        sidebarPath: require.resolve("./sidebars.rsae-fdd.ts"),
+      },
+    ],
   ],
 
   themeConfig: {
@@ -109,6 +118,13 @@ const config: Config = {
           docsPluginId: "discover-program-template-project",
         },
         {
+          type: "doc",
+          docId: "intro",
+          position: "left",
+          label: "RSAE-FDD",
+          docsPluginId: "rsae-fdd",
+        },
+        {
           href: "https://github.com/DISC-NU/DISC-Documentation-Website",
           label: "GitHub",
           position: "right",
@@ -132,6 +148,10 @@ const config: Config = {
             {
               label: "Discover Program Template",
               to: "/discover-program-template-project/intro",
+            },
+            {
+              label: "RSAE-FDD",
+              to: "/rsae-fdd/intro",
             },
           ],
         },

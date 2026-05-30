@@ -63,5 +63,5 @@ The FDD provides a **centralized, accessible platform** that:
 | Role | Name |
 |---|---|
 | PM | Harry |
-| Frontend | Aarav, Abraham, Collin |
+| Frontend | Aarav |
 | Backend | Michael, Darian |
