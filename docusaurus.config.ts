@@ -57,12 +57,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: "RSAE Fund Donation Dashboard",
-      logo: {
-        alt: "DISC Logo",
-        src: "img/disc-logo.png",
-        href: "https://disc-nu.github.io/disc-website/",
-      },
+      title: "RSAE Funds & Donations Dashboard",
       items: [
         {
           type: "doc",

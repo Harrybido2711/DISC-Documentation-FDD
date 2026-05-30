@@ -31,6 +31,21 @@ const sidebar: SidebarsConfig = {
           id: "frontend/frontend-project-structure",
           label: "Project Structure",
         },
+        {
+          type: "doc",
+          id: "frontend/frontend-website-layout",
+          label: "Website Layout",
+        },
+        {
+          type: "doc",
+          id: "frontend/frontend-features",
+          label: "Features",
+        },
+        {
+          type: "doc",
+          id: "frontend/frontend-deployment",
+          label: "Deployment",
+        },
       ],
     },
     {
