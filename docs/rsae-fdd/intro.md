@@ -2,6 +2,7 @@
 id: intro
 title: RSAE Fund Donation Dashboard
 sidebar_position: 1
+slug: /
 ---
 
 # RSAE Fund Donation Dashboard

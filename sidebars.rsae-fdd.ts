@@ -1,6 +1,6 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
-const rsaeFddSidebar: SidebarsConfig = {
+const sidebar: SidebarsConfig = {
   tutorialSidebar: [
     {
       type: "doc",
@@ -63,4 +63,4 @@ const rsaeFddSidebar: SidebarsConfig = {
   ],
 };
 
-export default rsaeFddSidebar;
+export default sidebar;

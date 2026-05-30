@@ -3,15 +3,15 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "DISC Documentation",
-  tagline: "Documentation for DISC Projects",
+  title: "RSAE-FDD Documentation",
+  tagline: "Fund Donation Dashboard — Reparations Stakeholders Authority of Evanston",
   favicon: "img/favicon.ico",
 
   url: "https://docs.discnu.org",
   baseUrl: "/",
 
-  organizationName: "DISC-NU",
-  projectName: "DISC-Documentation-Website",
+  organizationName: "Harrybido2711",
+  projectName: "DISC-Documentation-FDD",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -32,13 +32,11 @@ const config: Config = {
       "classic",
       {
         docs: {
-          id: "workshop-series",
-          path: "docs/workshop-series",
+          path: "docs/rsae-fdd",
           routeBasePath: "/",
-
-          sidebarPath: require.resolve("./sidebars.workshop-series.ts"),
+          sidebarPath: require.resolve("./sidebars.rsae-fdd.ts"),
           editUrl:
-            "https://github.com/DISC-NU/DISC-Documentation-Website/tree/main",
+            "https://github.com/Harrybido2711/DISC-Documentation-FDD/tree/main",
         },
         blog: false,
         pages: false,
@@ -49,37 +47,7 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "disc-website",
-        path: "docs/disc-website",
-        routeBasePath: "disc-website",
-        sidebarPath: require.resolve("./sidebars.disc-website.ts"),
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "discover-program-template-project",
-        path: "docs/discover-program-template-project",
-        routeBasePath: "discover-program-template-project",
-        sidebarPath: require.resolve(
-          "./sidebars.discover-program-template-project.ts"
-        ),
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "rsae-fdd",
-        path: "docs/rsae-fdd",
-        routeBasePath: "rsae-fdd",
-        sidebarPath: require.resolve("./sidebars.rsae-fdd.ts"),
-      },
-    ],
-  ],
+  plugins: [],
 
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",
@@ -89,7 +57,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: "Develop & Innovate for Social Change",
+      title: "RSAE Fund Donation Dashboard",
       logo: {
         alt: "DISC Logo",
         src: "img/disc-logo.png",
@@ -100,32 +68,10 @@ const config: Config = {
           type: "doc",
           docId: "intro",
           position: "left",
-          label: "Workshop Series",
-          docsPluginId: "workshop-series",
+          label: "Documentation",
         },
         {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "DISC Website",
-          docsPluginId: "disc-website",
-        },
-        {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "Discover Program",
-          docsPluginId: "discover-program-template-project",
-        },
-        {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "RSAE-FDD",
-          docsPluginId: "rsae-fdd",
-        },
-        {
-          href: "https://github.com/DISC-NU/DISC-Documentation-Website",
+          href: "https://github.com/Harrybido2711/DISC-Documentation-FDD",
           label: "GitHub",
           position: "right",
         },
@@ -137,22 +83,11 @@ const config: Config = {
         {
           title: "Documentation",
           items: [
-            {
-              label: "Workshop Series",
-              to: "/",
-            },
-            {
-              label: "DISC Website",
-              href: "/disc-website/intro",
-            },
-            {
-              label: "Discover Program Template",
-              to: "/discover-program-template-project/intro",
-            },
-            {
-              label: "RSAE-FDD",
-              to: "/rsae-fdd/intro",
-            },
+            { label: "Introduction", to: "/" },
+            { label: "Getting Started", to: "/getting-started" },
+            { label: "Authentication", to: "/authentication" },
+            { label: "Frontend", to: "/frontend/frontend-overview" },
+            { label: "Backend", to: "/backend/backend-overview" },
           ],
         },
         {
@@ -164,7 +99,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/DISC-NU",
+              href: "https://github.com/Harrybido2711/DISC-Documentation-FDD",
             },
           ],
         },
@@ -174,36 +109,6 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
-    algolia: {
-      // The application ID provided by Algolia
-      appId: "3TFR2VJ1XU",
-
-      // Public API key: it is safe to commit it
-      apiKey: "ad5ad1f82b15090e44a9c782190183dc",
-
-      indexName: "disc-nuio",
-
-      // Optional: see doc section below
-      contextualSearch: true,
-
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      externalUrlRegex: "external\\.com|domain\\.com",
-
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      replaceSearchResultPathname: {
-        from: "/docs/", // or as RegExp: /\/docs\//
-        to: "/",
-      },
-
-      // Optional: Algolia search parameters
-      searchParameters: {},
-
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: "search",
-
-      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-      insights: false,
     },
   } satisfies Preset.ThemeConfig,
 };
